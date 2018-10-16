@@ -49,6 +49,8 @@ fi
 echo "Copying all JAR artifacts"
 cp -v $LOCAL_SOURCE_DIR/build/libs/*.jar $DEPLOY_DIR
 
+popd &> /dev/null
+
 if [ $(ls /opt/openshift/*.jar | wc -l) -eq 1 ]; then
   mv /opt/openshift/*.jar /opt/openshift/app.jar
   [ ! -f /opt/openshift/app.jar ] && echo "Application could not be properly built." && exit 1 
