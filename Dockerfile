@@ -7,7 +7,7 @@ FROM openshift/base-centos7
 # TODO: Rename the builder environment variable to inform users about application you provide them
 ENV BUILDER_VERSION 1.0
 
-ENV GRADLE_VERSION 4.10.2
+ENV GRADLE_VERSION 4.8
 
 # TODO: Set labels used in OpenShift to describe the builder image
 LABEL io.k8s.description="Platform for building springboot with gradle" \
