@@ -47,9 +47,7 @@ if [ $ERR -ne 0 ]; then
 fi
 
 echo "Copying all JAR artifacts"
-cp -v $LOCAL_SOURCE_DIR/build/libs/*.jar $DEPLOY_DIR 2> /dev/null
-
-popd &> /dev/null
+cp -v $LOCAL_SOURCE_DIR/build/libs/*.jar $DEPLOY_DIR
 
 if [ $(ls /opt/openshift/*.jar | wc -l) -eq 1 ]; then
   mv /opt/openshift/*.jar /opt/openshift/app.jar
