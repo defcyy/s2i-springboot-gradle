@@ -1,3 +1,7 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "jenkins-slave-gradle-centos7"
 spec:
   source:
     type: "Git"
@@ -9,5 +13,5 @@ spec:
       dockerfilePath: "Dockerfile.jenkins-slave"
   output:
     to:
-      kind: "ImageStream"
-      name: "docker-registry.default.svc:5000/ci/openshift/jenkins-slave-gradle-centos7:latest"
+      kind: "DockerImage"
+      name: "docker-registry.default.svc:5000/ci/jenkins-slave-gradle-centos7:latest"
